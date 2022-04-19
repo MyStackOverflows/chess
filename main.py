@@ -60,7 +60,7 @@ while not over:
     print(f"It is {player.name}'s turn. {player.name} is playing {player.colour}.")
     while not player.hasMoved:
         command = input(">>> ").lower()
-        while command.split()[0] not in commands.keys():
+        while command == "" or command.split()[0] not in commands.keys():
             print("Invalid command. Type 'help' for help.")
             command = input(">>> ").lower()
         if len(command.split()) == 1 and (command == "move" or command == "possible"):
